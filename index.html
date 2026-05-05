@@ -3,153 +3,256 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nguyễn Đăng Trị - Nghiên cứu khoa học</title>
+    <title>Nguyễn Đăng Trị - Scientific Researcher</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <div class="container">
-            <h1>ĐÂY LÀ DEMO CHO LỚP ĐỒ HỌA KỸ THUẬT SỐ</h1>
-            <button id="theme-toggle">🌙</button>
+        <div class="container header-inner">
+            <div class="brand">
+                <p class="eyebrow">Nguyễn Đăng Trị</p>
+                <p class="subtle">Scientific Researcher</p>
+            </div>
+            <nav class="nav-links">
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <button id="theme-toggle" aria-label="Toggle dark light theme">🌙</button>
         </div>
     </header>
     <main>
-        <section id="hero">
-            <div class="container">
-                <h2>AI Researcher</h2>
-                <p>Exploring the frontiers of artificial intelligence and telecommunications.</p>
-                <a href="#projects" class="cta-button">View Projects</a>
+        <section id="hero" class="hero">
+            <div class="container hero-grid">
+                <div class="hero-copy">
+                    <p class="eyebrow accent">Scientific Researcher</p>
+                    <h1>Nguyễn Đăng Trị</h1>
+                    <p class="hero-description">Building future-proof systems at the intersection of 5G, 6G and AI.</p>
+                    <div class="hero-badges">
+                        <span>5G</span>
+                        <span>6G</span>
+                        <span>AI</span>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat-block">
+                            <p class="stat-value">16</p>
+                            <p>Q1 publications</p>
+                        </div>
+                        <div class="stat-block">
+                            <p class="stat-value">2</p>
+                            <p>Patents</p>
+                        </div>
+                    </div>
+                    <a href="#projects" class="cta-button">View Projects</a>
+                </div>
+                <div class="hero-visual">
+                    <div class="visual-card">
+                        <p>Research Album</p>
+                        <h4>3 core projects</h4>
+                    </div>
+                    <div class="visual-card accent-card">
+                        <p>Focus areas</p>
+                        <h4>5G · 6G · AI</h4>
+                    </div>
+                </div>
             </div>
         </section>
-        <section id="about">
+        <section id="achievements" class="stats-section">
             <div class="container">
-                <h3>About Me</h3>
-                <p>I'm Nguyen Dang Tri, an AI Researcher passionate about advancing technology in AI and beyond.</p>
-                <p>Interests: Football, Volleyball</p>
+                <div class="section-header">
+                    <h3>Achievements</h3>
+                    <p>Top-level research milestones and recognition.</p>
+                </div>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <p class="stat-value">16</p>
+                        <p>Q1 publications</p>
+                    </div>
+                    <div class="stat-card">
+                        <p class="stat-value">2</p>
+                        <p>Patents</p>
+                    </div>
+                    <div class="stat-card">
+                        <p class="stat-value">10+</p>
+                        <p>Research collaborations</p>
+                    </div>
+                </div>
             </div>
         </section>
         <section id="projects">
             <div class="container">
-                <h3>Projects</h3>
+                <div class="section-header">
+                    <h3>Projects</h3>
+                    <p>Core research initiatives, illustrated with a visual project album.</p>
+                </div>
                 <div class="projects-grid">
                     <div class="project-card">
                         <h4>5G Research</h4>
-                        <p>Research on 5G technologies and their applications.</p>
+                        <p>Research on 5G technologies, network performance and practical deployment.</p>
                     </div>
                     <div class="project-card">
                         <h4>6G Research</h4>
-                        <p>Exploring future 6G networks and innovations.</p>
+                        <p>Exploring future 6G concepts, spectrum design and AI-native network systems.</p>
                     </div>
                     <div class="project-card">
                         <h4>AI for Automation</h4>
-                        <p>Developing AI solutions for automation processes.</p>
+                        <p>Developing intelligent automation solutions for telecom and industrial workflows.</p>
+                    </div>
+                </div>
+                <div class="project-album">
+                    <h4>Project Album</h4>
+                    <div class="album-grid">
+                        <div class="album-card">
+                            <div class="album-image"></div>
+                            <div class="album-copy">
+                                <h5>5G Field Study</h5>
+                                <p>Operational tests and data-driven insights.</p>
+                            </div>
+                        </div>
+                        <div class="album-card">
+                            <div class="album-image"></div>
+                            <div class="album-copy">
+                                <h5>6G Prototype</h5>
+                                <p>Design concepts for the next generation of wireless.</p>
+                            </div>
+                        </div>
+                        <div class="album-card">
+                            <div class="album-image"></div>
+                            <div class="album-copy">
+                                <h5>AI Automation</h5>
+                                <p>Smart workflows that reduce manual intervention.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-wrapper">
+                    <h4>Publications Timeline</h4>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <h4>2025</h4>
+                            <ul>
+                                <li>Advanced AI Techniques in Telecommunications</li>
+                                <li>Machine Learning for Network Optimization</li>
+                            </ul>
+                        </div>
+                        <div class="timeline-item">
+                            <h4>2024</h4>
+                            <ul>
+                                <li>6G Network Architecture Innovations</li>
+                                <li>AI-Driven Automation in 5G Systems</li>
+                            </ul>
+                        </div>
+                        <div class="timeline-item">
+                            <h4>2023</h4>
+                            <ul>
+                                <li>Edge Computing in 5G Networks</li>
+                                <li>Deep Learning for Signal Processing</li>
+                            </ul>
+                        </div>
+                        <div class="timeline-item">
+                            <h4>2022</h4>
+                            <ul>
+                                <li>5G Security Protocols</li>
+                                <li>AI Applications in IoT</li>
+                            </ul>
+                        </div>
+                        <div class="timeline-item">
+                            <h4>2021</h4>
+                            <ul>
+                                <li>Wireless Communication Advances</li>
+                                <li>Machine Learning in Network Design</li>
+                            </ul>
+                        </div>
+                        <div class="timeline-item">
+                            <h4>2020</h4>
+                            <ul>
+                                <li>4G to 5G Transition Strategies</li>
+                                <li>Neural Networks for Data Analysis</li>
+                            </ul>
+                        </div>
+                        <div class="timeline-item">
+                            <h4>2019</h4>
+                            <ul>
+                                <li>Telecom Infrastructure Optimization</li>
+                                <li>AI in Predictive Maintenance</li>
+                            </ul>
+                        </div>
+                        <div class="timeline-item">
+                            <h4>2018</h4>
+                            <ul>
+                                <li>Advanced Signal Processing</li>
+                                <li>Automation in Telecom Systems</li>
+                            </ul>
+                        </div>
+                        <div class="timeline-item">
+                            <h4>2017</h4>
+                            <ul>
+                                <li>5G Standardization Efforts</li>
+                                <li>Machine Learning Algorithms</li>
+                            </ul>
+                        </div>
+                        <div class="timeline-item">
+                            <h4>2016</h4>
+                            <ul>
+                                <li>Wireless Network Modeling</li>
+                                <li>AI for Resource Allocation</li>
+                            </ul>
+                        </div>
+                        <div class="timeline-item">
+                            <h4>2015</h4>
+                            <ul>
+                                <li>Early 5G Research</li>
+                                <li>Foundations of AI in Telecom</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section id="publications">
+        <section id="about">
             <div class="container">
-                <h3>Publications Timeline</h3>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <h4>2025</h4>
-                        <ul>
-                            <li>Advanced AI Techniques in Telecommunications</li>
-                            <li>Machine Learning for Network Optimization</li>
-                        </ul>
+                <div class="section-header">
+                    <h3>About</h3>
+                    <p>Short bio, core expertise and personal interests.</p>
+                </div>
+                <div class="about-grid">
+                    <div>
+                        <p>Nguyễn Đăng Trị is a scientific researcher focused on telecommunications and intelligent systems. Over the past decade, he has contributed to major research publications and patents in AI-driven connectivity.</p>
+                        <p>His work blends rigorous engineering with practical innovation to make networks smarter, faster and more adaptive.</p>
                     </div>
-                    <div class="timeline-item">
-                        <h4>2024</h4>
+                    <div>
+                        <p><strong>Expertise</strong></p>
                         <ul>
-                            <li>6G Network Architecture Innovations</li>
-                            <li>AI-Driven Automation in 5G Systems</li>
+                            <li>5G / 6G research</li>
+                            <li>AI for automation</li>
+                            <li>Network optimization</li>
                         </ul>
-                    </div>
-                    <div class="timeline-item">
-                        <h4>2023</h4>
+                        <p><strong>Interests</strong></p>
                         <ul>
-                            <li>Edge Computing in 5G Networks</li>
-                            <li>Deep Learning for Signal Processing</li>
-                        </ul>
-                    </div>
-                    <div class="timeline-item">
-                        <h4>2022</h4>
-                        <ul>
-                            <li>5G Security Protocols</li>
-                            <li>AI Applications in IoT</li>
-                        </ul>
-                    </div>
-                    <div class="timeline-item">
-                        <h4>2021</h4>
-                        <ul>
-                            <li>Wireless Communication Advances</li>
-                            <li>Machine Learning in Network Design</li>
-                        </ul>
-                    </div>
-                    <div class="timeline-item">
-                        <h4>2020</h4>
-                        <ul>
-                            <li>4G to 5G Transition Strategies</li>
-                            <li>Neural Networks for Data Analysis</li>
-                        </ul>
-                    </div>
-                    <div class="timeline-item">
-                        <h4>2019</h4>
-                        <ul>
-                            <li>Telecom Infrastructure Optimization</li>
-                            <li>AI in Predictive Maintenance</li>
-                        </ul>
-                    </div>
-                    <div class="timeline-item">
-                        <h4>2018</h4>
-                        <ul>
-                            <li>Advanced Signal Processing</li>
-                            <li>Automation in Telecom Systems</li>
-                        </ul>
-                    </div>
-                    <div class="timeline-item">
-                        <h4>2017</h4>
-                        <ul>
-                            <li>5G Standardization Efforts</li>
-                            <li>Machine Learning Algorithms</li>
-                        </ul>
-                    </div>
-                    <div class="timeline-item">
-                        <h4>2016</h4>
-                        <ul>
-                            <li>Wireless Network Modeling</li>
-                            <li>AI for Resource Allocation</li>
-                        </ul>
-                    </div>
-                    <div class="timeline-item">
-                        <h4>2015</h4>
-                        <ul>
-                            <li>Early 5G Research</li>
-                            <li>Foundations of AI in Telecom</li>
+                            <li>Football</li>
+                            <li>Volleyball</li>
                         </ul>
                     </div>
                 </div>
-            </div>
-        </section>
-        <section id="achievements">
-            <div class="container">
-                <h3>Achievements</h3>
-                <ul>
-                    <li>10 Q1 publications</li>
-                    <li>2 patents</li>
-                </ul>
             </div>
         </section>
         <section id="contact">
-            <div class="container">
-                <h3>Contact</h3>
-                <p>Get in touch: email@example.com</p>
+            <div class="container contact-card">
+                <div>
+                    <h3>Contact</h3>
+                    <p>Interested in collaborating or learning more? Send a message and let’s connect.</p>
+                </div>
+                <a href="mailto:email@example.com" class="cta-button">Get in touch</a>
             </div>
         </section>
     </main>
     <footer>
-        <div class="container">
-            <p>&copy; 2026 Nguyen Dang Tri</p>
+        <div class="container footer-inner">
+            <p>&copy; 2026 Nguyễn Đăng Trị</p>
+            <div class="footer-links">
+                <a href="#contact">Email</a>
+                <a href="#projects">Projects</a>
+            </div>
         </div>
     </footer>
     <script src="script.js"></script>
