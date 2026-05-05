@@ -45,3 +45,69 @@ const observer = new IntersectionObserver((entries) => {
 sections.forEach(section => {
     observer.observe(section);
 });
+
+const galleryImages = Array.from(document.querySelectorAll('.album-image img'));
+const lightbox = document.getElementById('lightbox');
+const lightboxImage = document.querySelector('.lightbox-image');
+const lightboxCaption = document.querySelector('.lightbox-caption');
+const lightboxCounter = document.querySelector('.lightbox-counter');
+const lightboxClose = document.querySelector('.lightbox-close');
+const lightboxPrev = document.querySelector('.lightbox-prev');
+const lightboxNext = document.querySelector('.lightbox-next');
+let activeIndex = 0;
+
+function updateLightbox(index) {
+    const image = galleryImages[index];
+    const title = image.closest('.album-card')?.querySelector('.album-copy h5')?.textContent || '';
+    lightboxImage.src = image.src;
+    lightboxImage.alt = image.alt;
+    lightboxCaption.textContent = title;
+    lightboxCounter.textContent = `${index + 1} / ${galleryImages.length}`;
+    activeIndex = index;
+}
+
+function openLightbox(index) {
+    updateLightbox(index);
+    lightbox.classList.remove('hidden');
+    lightbox.setAttribute('aria-hidden', 'false');
+}
+
+function closeLightbox() {
+    lightbox.classList.add('hidden');
+    lightbox.setAttribute('aria-hidden', 'true');
+}
+
+galleryImages.forEach((img, index) => {
+    img.addEventListener('click', () => openLightbox(index));
+});
+
+lightboxClose.addEventListener('click', closeLightbox);
+lightboxPrev.addEventListener('click', () => {
+    const nextIndex = (activeIndex - 1 + galleryImages.length) % galleryImages.length;
+    updateLightbox(nextIndex);
+});
+lightboxNext.addEventListener('click', () => {
+    const nextIndex = (activeIndex + 1) % galleryImages.length;
+    updateLightbox(nextIndex);
+});
+
+lightbox.addEventListener('click', (event) => {
+    if (event.target === lightbox) {
+        closeLightbox();
+    }
+});
+
+document.addEventListener('keydown', (event) => {
+    if (lightbox.classList.contains('hidden')) return;
+    if (event.key === 'Escape') {
+        closeLightbox();
+    }
+    if (event.key === 'ArrowLeft') {
+        const prevIndex = (activeIndex - 1 + galleryImages.length) % galleryImages.length;
+        updateLightbox(prevIndex);
+    }
+    if (event.key === 'ArrowRight') {
+        const nextIndex = (activeIndex + 1) % galleryImages.length;
+        updateLightbox(nextIndex);
+    }
+});
